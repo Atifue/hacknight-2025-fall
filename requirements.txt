@@ -1,1 +1,2 @@
 pip install -U google-genai python-dotenv
+pip3 install elevenlabs
