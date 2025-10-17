@@ -7,7 +7,7 @@ from google import genai
 load_dotenv()
 
 # Initialize Gemini client with API key
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+client = genai.Client(api_key=os.getenv("GEMINI_API_KE"))
 if len(sys.argv) <= 1:
   print("You didn't enter a txt file for me to gemini yup")
 input_file = sys.argv[1]
