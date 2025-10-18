@@ -1,2 +1,14 @@
 pip install -U google-genai python-dotenv
 pip3 install elevenlabs
+#To run the lipsync:
+brew install ffmpeg
+python3 -m venv revoice-env
+source revoice-env/bin/activate
+pip3 install --upgrade pip
+pip3 install python-dotenv openai-whisper google-generativeai elevenlabs onnx onnxruntime numpy scipy librosa opencv-python insightface soundfile
+#To run nonlipsynched
+brew install ffmpeg
+python3 -m venv revoice-env
+source revoice-env/bin/activate
+pip3 install --upgrade pip
+pip3 install python-dotenv openai-whisper google-generativeai elevenlabs
