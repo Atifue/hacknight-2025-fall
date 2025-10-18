@@ -3,11 +3,12 @@ from dotenv import load_dotenv
 import whisper
 from google import genai
 from elevenlabs.client import ElevenLabs
-
-
-
+from voice_cloner import VoiceCloner
+import random
+load_dotenv()
+ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 # ================== HARD-CODE YOUR SETTINGS ==================
-MP4_PATH = "/Users/marium3/Downloads/newnew.mp4"          # your input video
+MP4_PATH = "testing2.mp4"          # your input video
 VOICE_ID = "FRyuKfPlEWkjhOilQCqk"              # your ElevenLabs cloned voice
 WHISPER_MODEL = "base"                         # tiny/base/small/medium/large
 CLEAN_MODE = "fluency"                         # "fluency" (recommended) or "grammar"
@@ -39,6 +40,19 @@ def need_ffmpeg():
         run(["ffprobe","-version"])
     except Exception:
         sys.exit("❌ ffmpeg/ffprobe not found. Install ffmpeg and retry.")
+
+def extract_audio_from_mp4(video_path):
+    tmp_wav = tempfile.NamedTemporaryFile(suffix=".mp3", delete=False).name
+    subprocess.run([
+        "ffmpeg", "-y", "-i", video_path, "-vn",
+        "-acodec", "libmp3lame", tmp_wav
+    ], check=True)
+    return tmp_wav
+
+wav_path = extract_audio_from_mp4("testing2.mp4")
+cloner = VoiceCloner(ELEVENLABS_API_KEY)
+VOICE_ID = cloner.clone_voice(wav_path, "VOICE")
+
 
 def extract_audio_for_asr(mp4, wav16k_mono):
     # best input for Whisper
@@ -93,7 +107,7 @@ def clean_text_with_gemini(raw_text, mode=CLEAN_MODE):
 def elevenlabs_tts_to_mp3(text, out_mp3, voice_id=VOICE_ID):
     print("🔊 Generating TTS…")
     load_dotenv()
-    ekey = os.getenv("ELEVEN_LABS")
+    ekey = os.getenv("ELEVENLABS_API_KEY")
     if not ekey:
         raise RuntimeError("No ELEVENLABS_API_KEY in .env")
     client = ElevenLabs(api_key=ekey)
