@@ -1,5 +1,10 @@
 pip install -U google-genai python-dotenv
 pip3 install elevenlabs
+#since i added the wav2lip in the repo, u need to do these 
+brew install git-lfs
+git lfs install
+git lfs pull
+#now u can run it 
 #To run the lipsync:
 brew install ffmpeg
 python3 -m venv revoice-env
