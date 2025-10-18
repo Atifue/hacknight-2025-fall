@@ -20,4 +20,4 @@ venv/
 *.log
 
 #Ignore environment 
-.env
+.env 
