@@ -126,16 +126,16 @@ class SpeechTherapyAdvisor:
         # Tips database organized by stutter type
         self.tips = {
             "repetition": {
-                "description": "Repetitions (like 'b-b-b-ball') occur when your speech mechanism restarts the same sound instead of flowing through smoothly.",
+                "description": "Repetitions occur when your speech mechanism restarts the same sound instead of flowing through smoothly.",
                 "why_it_happens": "Excess tension in articulators, rushed timing, or disrupted breath-speech coordination.",
                 "techniques": [
-                    "**Prolonged Speech (Stretching)**: Extend the first sound smoothly instead of repeating it. Instead of 'b-b-b-ball', do 'baaaaaall' (stretch 2-3 seconds). Stretching prevents the repetition pattern—your brain can't send the 'restart' signal when you're already producing continuous sound.",
-                    "**Light Articulatory Contact**: Use minimal pressure when lips/tongue form sounds. Touch lips together gently for B/P/M (like touching a soap bubble). Tongue barely contacts roof of mouth for T/D/K. Heavy pressure causes articulators to 'stick' and trigger repetitions.",
-                    "**Continuous Phonation**: Keep airflow and voicing continuous between sounds—never stop and restart. Start by humming between words: 'I (hmmm) like (hmmm) dogs', then gradually reduce the hum but maintain continuous airflow.",
+                    "**Prolonged Speech (Stretching)**: Extend the first sound smoothly instead of repeating it. Stretch the sound for 2-3 seconds. This prevents the repetition pattern—your brain can't send the 'restart' signal when you're already producing continuous sound.",
+                    "**Light Articulatory Contact**: Use minimal pressure when lips/tongue form sounds. Touch lips together gently (like touching a soap bubble). Tongue barely contacts roof of mouth. Heavy pressure causes articulators to 'stick' and trigger repetitions.",
+                    "**Continuous Phonation**: Keep airflow and voicing continuous between sounds—never stop and restart. Start by humming between words, then gradually reduce the hum but maintain continuous airflow.",
                 ],
                 "exercises": [
-                    "**Stretching Practice**: Start with isolated sounds (mmmm, sssss), then syllables (maaaa, seee), then full words (more, sun, ball). Hold each sound 2-3 seconds.",
-                    "**Light Contact Drill**: Say 'paper, baby, maybe' with feather-light lip contact. Use a mirror to check you're not clenching.",
+                    "**Stretching Practice**: Start with isolated sounds, then syllables, then full words. Hold each sound 2-3 seconds.",
+                    "**Light Contact Drill**: Practice words with feather-light lip/tongue contact. Use a mirror to check you're not clenching.",
                     "**Continuous Flow**: Read sentences while maintaining steady breath support. Think of your voice as a river that never stops flowing."
                 ],
                 "mouth_positions": [
@@ -166,17 +166,17 @@ class SpeechTherapyAdvisor:
             },
             
             "prolongation": {
-                "description": "Prolongations (like 'sssssnake') occur when a sound is held longer than intended, usually due to excessive tension or air pressure.",
+                "description": "Prolongations occur when a sound is held longer than intended, usually due to excessive tension or air pressure.",
                 "why_it_happens": "Too much articulatory pressure, excessive airflow, or inability to transition to the next sound.",
                 "techniques": [
-                    "**Gentle Onset**: Start sounds softly and gradually increase to normal volume. Begin at 20% volume and fade up: '^s^s^sun' → 'sun'. Like turning up a volume dial, not flipping a switch. Hard onsets create tension that leads to prolongations.",
+                    "**Gentle Onset**: Start sounds softly and gradually increase to normal volume. Begin at 20% volume and fade up. Like turning up a volume dial, not flipping a switch. Hard onsets create tension that leads to prolongations.",
                     "**Reduced Air Pressure**: Use less forceful airflow, especially on S, F, SH, TH. Hold hand in front of mouth—feel gentle airflow, not a blast. Think 'blowing on hot soup' not 'blowing out candles'. Excessive air pressure builds up and creates prolongations.",
-                    "**Quick Transition Drill**: Practice moving rapidly from the prolonged sound to the next sound. If stuck on 'ssssnake,' practice: 's-nake' (quick s, immediate transition). Don't allow time to hold the sound. The faster you transition, the less opportunity for prolongation.",
+                    "**Quick Transition Drill**: Practice moving rapidly from the prolonged sound to the next sound. Quick start, immediate transition. Don't allow time to hold the sound. The faster you transition, the less opportunity for prolongation.",
                 ],
                 "exercises": [
                     "**Gentle Start Practice**: Start with vowels (easier), then fricatives like S/F/SH. Begin each word as a whisper, then gradually add voice.",
-                    "**Reduced Air Drill**: Say 'sun, fun, shoe' with minimal air. If you hear loud hissing, you're using too much air. Hold hand in front—should feel gentle breeze.",
-                    "**Quick Transition with Metronome**: Practice consonant-vowel pairs at increasing speeds: 'sa, se, si, so, su'. Make the consonant as brief as possible. Use metronome to speed up gradually."
+                    "**Reduced Air Drill**: Practice words with fricatives using minimal air. If you hear loud hissing, you're using too much air. Hold hand in front—should feel gentle breeze.",
+                    "**Quick Transition with Metronome**: Practice consonant-vowel pairs at increasing speeds. Make the consonant as brief as possible. Use metronome to speed up gradually."
                 ],
                 "mouth_positions": [
                     "For 's' sounds: Tongue tip barely touches ridge behind top teeth. Create narrow channel, not a seal.",
@@ -190,7 +190,7 @@ class SpeechTherapyAdvisor:
                 "description": "Blocks are complete stoppages of airflow/voicing—you physically cannot produce sound despite trying, often with visible tension.",
                 "why_it_happens": "Extreme tension in multiple muscle groups (jaw, tongue, throat, chest), often accompanied by breath-holding.",
                 "techniques": [
-                    "**Pre-Phonatory Airflow**: Establish airflow BEFORE attempting the word. (1) Breathe in through nose (3 counts), (2) Begin gentle exhalation, (3) While air is flowing, add voicing: start with 'h' sound, then target word. Example: 'h-ball' or hum first 'mmm-ball'. Blocks occur when you try to speak on held breath or with closed vocal tract.",
+                    "**Pre-Phonatory Airflow**: Establish airflow BEFORE attempting the word. (1) Breathe in through nose (3 counts), (2) Begin gentle exhalation, (3) While air is flowing, add voicing: start with 'h' sound or gentle hum, then say your word. Blocks occur when you try to speak on held breath or with closed vocal tract.",
                     "**Voluntary Relaxation (Cancellation)**: When you feel a block starting, STOP immediately. Don't fight it. (1) Pause completely, (2) Release all tension (drop shoulders, unclench jaw), (3) Take one breath, (4) Position mouth with LIGHT contact, (5) Begin again with gentle airflow. Fighting a block increases tension and makes it worse.",
                     "**Progressive Muscle Relaxation**: Systematically relax speech muscle groups. (1) Clench jaw 5 seconds, then release completely, (2) Press tongue hard against roof, then let it float, (3) Tense neck/shoulders, then let them drop. Regular practice reduces baseline tension and makes blocks less likely.",
                 ],

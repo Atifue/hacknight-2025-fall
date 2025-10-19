@@ -193,7 +193,7 @@ def detect_acoustic_repetitions(y, sr, words):
             y=y, sr=sr,
             hop_length=512,
             backtrack=False,
-            delta=0.12  # High threshold - only very clear repetitions
+            delta=0.15  # Very high threshold - only extremely clear repetitions
         )
         
         if len(onset_frames) < 4:
@@ -232,8 +232,8 @@ def detect_acoustic_repetitions(y, sr, words):
                     # Find next word after this cluster (within 0.8s)
                     for w in words:
                         if w['start'] >= end_time and (w['start'] - end_time) < 0.8:
-                            word_text = w['word'].strip('.,!?;:\'"').lower()
-                            if word_text:
+                            word_text = w['word'].strip('.,!?;:\'" \t\n\r').lower()
+                            if word_text and len(word_text) > 0:
                                 # Check for consonant clusters first (st, sl, tr, etc.)
                                 consonant_clusters = ['st', 'sl', 'sp', 'sk', 'sc', 'tr', 'dr', 'br', 'cr', 'fr', 'gr', 'pr', 'bl', 'cl', 'fl', 'gl', 'pl']
                                 if len(word_text) >= 2 and word_text[:2] in consonant_clusters:
@@ -243,8 +243,8 @@ def detect_acoustic_repetitions(y, sr, words):
                                 target_word = w['word']
                             break
                     
-                    # If we still couldn't infer, skip this detection (too unreliable)
-                    if not inferred_sound or not target_word:
+                    # If we still couldn't infer, OR if it's just whitespace/punctuation, skip this detection
+                    if not inferred_sound or not target_word or not inferred_sound.strip() or len(inferred_sound.strip()) == 0:
                         i += burst_count
                         continue
                     events.append({

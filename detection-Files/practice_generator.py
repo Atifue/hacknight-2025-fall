@@ -189,7 +189,7 @@ STRUCTURE (under 15 seconds):
 4. Two short phrases
 """
         
-        prompt = f"""You are a speech therapist creating a BRIEF practice recording for the "{sound}" sound in "{word}".
+        prompt = f"""You are a speech therapist. Create a BRIEF practice recording for the "{sound}" sound in "{word}".
 
 Stutter type: {stutter_type}
 
@@ -213,7 +213,13 @@ PACING RULES:
 
 {technique_instructions}
 
-Generate the practice script now (15 seconds maximum):"""
+IMPORTANT: Output ONLY the practice script. Do NOT include:
+- "Here's your script" or similar introductions
+- Explanations, headings, or meta-text
+- "Now you try" or encouragement
+- Any text that isn't part of the spoken exercise
+
+Start directly with the practice sounds and words:"""
         
         return prompt
     
