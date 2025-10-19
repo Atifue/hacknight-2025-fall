@@ -1,20 +1,55 @@
-pip install -U google-genai python-dotenv
-pip3 install elevenlabs
-#since i added the wav2lip in the repo, u need to do these 
-brew install git-lfs
-git lfs install
-git lfs pull
-#now u can run it 
-#To run the lipsync:
-brew install ffmpeg
-python3 -m venv revoice-env
-source revoice-env/bin/activate
-pip3 install --upgrade pip
-pip3 install python-dotenv openai-whisper google-generativeai elevenlabs onnx onnxruntime numpy scipy librosa opencv-python insightface soundfile
-#To run nonlipsynched
-brew install ffmpeg
-python3 -m venv revoice-env
-source revoice-env/bin/activate
-pip3 install --upgrade pip
-pip3 install python-dotenv openai-whisper google-generativeai elevenlabs
-pip install flask flask-cors
+# ============================================
+# ReVoice - Python Requirements
+# ============================================
+
+# Core dependencies for stutter detection & practice generation
+faster-whisper
+librosa
+soundfile
+numpy
+pydub
+google-genai
+elevenlabs
+python-dotenv
+
+# Backend API (for React frontend connection)
+flask
+flask-cors
+
+# ============================================
+# SETUP INSTRUCTIONS
+# ============================================
+
+# System dependencies (install first):
+#   brew install ffmpeg
+
+# For wav2lip (optional - only if using video lipsync):
+#   brew install git-lfs
+#   git lfs install
+#   git lfs pull
+
+# Python setup:
+#   python3 -m venv revoice-env
+#   source revoice-env/bin/activate
+#   pip3 install --upgrade pip
+#   pip3 install -r requirements.txt
+
+# For full lipsync feature (optional):
+#   pip3 install onnx onnxruntime scipy opencv-python insightface
+
+# API Keys:
+#   Create detection-Files/.env with:
+#   GEMINI_API_KEY=your-key
+#   ELEVENLABS_API_KEY=your-key
+
+# ============================================
+# TO RUN:
+# ============================================
+# Terminal 1 (Backend):
+#   source revoice-env/bin/activate
+#   python3 backend_api.py
+#
+# Terminal 2 (Frontend):
+#   cd revoice-frontend
+#   npm start
+# ============================================
