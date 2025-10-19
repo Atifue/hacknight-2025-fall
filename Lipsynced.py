@@ -8,8 +8,8 @@ import random
 load_dotenv()
 ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 # ================== HARD-CODE YOUR SETTINGS ==================
-MP4_PATH = "testing2.mp4"          # your input video
-VOICE_ID = "FRyuKfPlEWkjhOilQCqk"              # your ElevenLabs cloned voice
+MP4_PATH = "/Users/marium3/Downloads/newpersonagain.mp4"          # your input video
+#VOICE_ID = "FRyuKfPlEWkjhOilQCqk"              # your ElevenLabs cloned voice
 WHISPER_MODEL = "base"                         # tiny/base/small/medium/large
 CLEAN_MODE = "fluency"                         # "fluency" (recommended) or "grammar"
 
@@ -49,7 +49,7 @@ def extract_audio_from_mp4(video_path):
     ], check=True)
     return tmp_wav
 
-wav_path = extract_audio_from_mp4("testing2.mp4")
+wav_path = extract_audio_from_mp4("/Users/marium3/Downloads/newpersonagain.mp4")
 cloner = VoiceCloner(ELEVENLABS_API_KEY)
 VOICE_ID = cloner.clone_voice(wav_path, "VOICE")
 
