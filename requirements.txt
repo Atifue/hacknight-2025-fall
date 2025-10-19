@@ -17,3 +17,4 @@ python3 -m venv revoice-env
 source revoice-env/bin/activate
 pip3 install --upgrade pip
 pip3 install python-dotenv openai-whisper google-generativeai elevenlabs
+pip install flask flask-cors
