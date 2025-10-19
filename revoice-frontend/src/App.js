@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   const mediaRecorderRef = useRef(null);
   const timerRef = useRef(null);
   const videoRef = useRef(null);
+  const navigate = useNavigate();
 
   // 🎬 START RECORDING
   const startRecording = async (withVideo = false) => {
@@ -211,6 +213,14 @@ function App() {
               Clone My Voice 🎤
             </button>
           )}
+          
+          <button 
+            className="practice-button" 
+            onClick={() => navigate('/practice')}
+          >
+            📚 Assistance / Practice
+          </button>
+          
         </div>
 
         <p className="instructions">

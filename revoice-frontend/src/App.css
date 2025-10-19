@@ -296,6 +296,7 @@
   font-weight: 600;
   cursor: pointer;
   margin-top: 15px;
+  margin-bottom: 20px; /* ADD THIS LINE */
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
   animation: slideUp 0.3s ease;
@@ -323,4 +324,24 @@
   color: #666;
   font-style: italic;
   margin-top: 25px;
+}
+
+.practice-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px; /* CHANGE FROM 20px TO 30px OR 40px */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.practice-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
